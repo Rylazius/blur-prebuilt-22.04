@@ -1,11 +1,14 @@
 apt update
-apt install unzip -y
+apt install software-properties-common -y
+sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg7 -y
+sudo apt install ffmpeg libfftw3-dev libfftw3-single3 libavutil-dev libavcodec-dev libavformat-dev libswscale-dev unzip -y
 sudo pip3 install --upgrade cython
 export PYTHONPATH=/usr/local/lib/python3.10/site-packages:$PYTHONPATH
+sudo ldconfig
 
 # install vapoursynth
 wget https://github.com/Rylazius/blur-prebuilt-22.04/raw/refs/heads/main/vapoursynth.deb
-dpkg -i vapoursynth.deb
+sudo dpkg -i vapoursynth.deb
 
 # install plugins
 mkdir -p /usr/lib/vapoursynth
