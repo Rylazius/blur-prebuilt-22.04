@@ -1,7 +1,8 @@
 apt update
 apt install software-properties-common -y
 sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg7 -y
-sudo apt install ffmpeg libfftw3-dev libfftw3-single3 libavutil-dev libavcodec-dev libavformat-dev libswscale-dev unzip -y
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+sudo apt install ffmpeg libfftw3-dev libfftw3-single3 libavutil-dev libavcodec-dev libavformat-dev libswscale-dev unzip libstdc++6 -y
 sudo pip3 install --upgrade cython
 export PYTHONPATH=/usr/local/lib/python3.10/site-packages:$PYTHONPATH
 sudo ldconfig
